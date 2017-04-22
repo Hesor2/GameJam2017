@@ -14,9 +14,17 @@ public class Player : Collidable
     public float maxVelocity = 500;
     public bool canInteract = true;
 
+    public string introText;
+    public Rect textArea;
+    public GUIStyle introStyle;
+
+    private bool showText = true;
+    public float timeShown = 5.0f;
+    private float currentTime = 0.0f, executedTime = 0.0f;
+
     private bool isFalling = false;
     private bool facingRight = true;
-    public HammerTime hammer;
+    private HammerTime hammer;
 
     //private Interactable interactable;
 
@@ -27,11 +35,26 @@ public class Player : Collidable
         boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         hammer = GetComponentInChildren<HammerTime>();
+        executedTime = Time.time;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
+        //intro text
+        if (showText)
+        {
+            currentTime = Time.time;
+
+            
+                if (currentTime - executedTime > timeShown)
+                {
+                    executedTime = 0.0f;
+                    showText = false;
+                }
+            
+        }
+
         Vector2 velocity = Vector2.zero;
         float h = Input.GetAxis("Horizontal");
         if (rb.velocity.x * h < maxVelocity)
@@ -55,14 +78,17 @@ public class Player : Collidable
             velocity.y = jumpSpeed * rb.mass * Time.deltaTime;
             isFalling = true;
         }
-        /*
-        //Interact
-        if (Input.GetKeyDown("space"))
+
+
+        
+        //Hammer
+        if (Input.GetKeyDown("space") && hammer != null)
         {
-            Vector2 pos = (Vector2)transform.position + boxCollider.offset;
-            var size = boxCollider.size;
-            Physics2D.BoxCastAll(pos, size);
-        }*/
+            if(!hammer.isSwinging())
+            {
+                hammer.Swing(spriteRenderer.flipX);
+            }
+        }
 
         rb.AddForce(velocity, ForceMode2D.Impulse);
         //rb.velocity -= rb.velocity * (1 - friction);
@@ -89,6 +115,12 @@ public class Player : Collidable
             SceneManager.LoadScene("Lab");
 
         }
+    }
+
+    void OnGUI()
+    {
+        if (showText)
+            GUI.Label(textArea, introText, introStyle);
     }
 
 

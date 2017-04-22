@@ -10,7 +10,8 @@ public class HammerTime : MonoBehaviour {
     private bool swinging = false;
 
     private int currentSection = 0;
-    private Time lastSwingTime;
+    private float lastSwingTime = -1;
+    private bool flipped = false;
 
 
 	// Use this for initialization
@@ -23,16 +24,42 @@ public class HammerTime : MonoBehaviour {
     {
 		if(swinging)
         {
-            if(lastSwingTime == null)
+            if(lastSwingTime == -1)
             {
-
+                lastSwingTime = Time.time;
+                currentSection = 0;
+            }
+            else
+            {
+                if(Time.time - lastSwingTime>= swingDelay)
+                {
+                    lastSwingTime = Time.time;
+                    //print("i get here");
+                    float angle = 360 / swingSection;
+                    int h;
+                    if (flipped) h = 1;
+                    else h = -1;
+                    transform.Rotate(0, 0, angle * h);
+                    if(currentSection == swingSection)
+                    {
+                        swinging = false;
+                        transform.rotation = Quaternion.identity;
+                        lastSwingTime = -1;
+                    }
+                    else
+                    {
+                        currentSection++;
+                    }
+                }
             }
         }
 	}
 
-    public void Swing()
+    public void Swing(bool flipX)
     {
         swinging = true;
+        flipped = flipX;
+        //print("i got called");
     }
 
     public bool isSwinging()
@@ -40,7 +67,7 @@ public class HammerTime : MonoBehaviour {
         return swinging;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Enemy"))
         {
@@ -55,8 +82,8 @@ public class HammerTime : MonoBehaviour {
 
             Vector2 direction = difference.normalized;
 
-            rb.AddForce(direction * forcetoapply);
-
+            rb.AddForce(-direction * forcetoapply);
+            print("did it");
 
         }
     }
