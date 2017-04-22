@@ -8,6 +8,7 @@ public class LugNutAI : MonoBehaviour
     public float aggroRange = 20;
     GameObject player;
     Rigidbody2D rb;
+    SpriteRenderer spriteRenderer;
 	// Use this for initialization
 	void Start ()
     {
@@ -15,8 +16,8 @@ public class LugNutAI : MonoBehaviour
         //print(player.transform.position);
 
         rb = GetComponent<Rigidbody2D>();
-		
-	}
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate ()
@@ -29,12 +30,24 @@ public class LugNutAI : MonoBehaviour
             if(hDistance > 0)
             {
                 rb.AddTorque(-torque);
+                spriteRenderer.flipX = false;
             }
             //left
             else
             {
                 rb.AddTorque(torque);
+                spriteRenderer.flipX = true;
             }
+
+            /*if (h < 0)
+            {
+                //transform.Rotate(new Vector3(0, 0, 180* h));
+                
+            }
+            else if (h > 0)
+            {
+                
+            }*/
         }
 	}
 }

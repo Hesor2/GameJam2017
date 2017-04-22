@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Player : Collidable
 {
     Rigidbody2D rb;
     BoxCollider2D boxCollider;
+    SpriteRenderer spriteRenderer;
+    public float friction = 0.01f;
     public float jumpSpeed = 10;
     public float walkSpeed = 4;
     public float maxVelocity = 500;
 
     private bool isFalling = false;
+    private bool facingRight = true;
 
     //private Interactable interactable;
 
@@ -19,6 +23,7 @@ public class Player : Collidable
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 	
 	// Update is called once per frame
@@ -29,6 +34,16 @@ public class Player : Collidable
         if (rb.velocity.x * h < maxVelocity)
         {
             velocity.x = h * walkSpeed * rb.mass * Time.deltaTime;
+            
+            if(h<0)
+            {
+                //transform.Rotate(new Vector3(0, 0, 180* h));
+                spriteRenderer.flipX = true;
+            }
+            else if(h>0)
+            {
+                spriteRenderer.flipX = false;
+            }
         }
 
         //Jump
@@ -46,7 +61,8 @@ public class Player : Collidable
             Physics2D.BoxCastAll(pos, size);
         }*/
 
-        rb.AddForce(velocity);
+        rb.AddForce(velocity, ForceMode2D.Impulse);
+        //rb.velocity -= rb.velocity * (1 - friction);
     }
 
     void OnTriggerStay2D(Collider2D collider)
@@ -58,6 +74,17 @@ public class Player : Collidable
             {
                 interactable.Interact(gameObject);
             }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.gameObject.tag == "Finish")
+        {
+            //change scene
+            //Application.LoadLevel("HighScore");
+            SceneManager.LoadScene("Lab");
+
         }
     }
 
