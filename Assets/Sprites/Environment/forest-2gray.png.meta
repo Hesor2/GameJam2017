@@ -1,22 +1,26 @@
 fileFormatVersion: 2
-guid: 892fa09bb16ba0b439b1df1ed39ee561
-timeCreated: 1492893509
+guid: 7d6eac75400b04a4b9e5e6ca7fcbaa53
+timeCreated: 1492889256
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: maces_0
-    21300002: maces_1
-    21300004: maces_2
-    21300006: maces_3
-    21300008: maces_4
-    21300010: maces_5
-    21300012: maces_6
-    21300014: maces_7
-    21300016: maces_8
-    21300018: maces_9
-    21300020: maces_10
-    21300022: maces_11
-    21300024: maces_12
+    21300000: forest-2gray_0
+    21300002: forest-2gray_1
+    21300004: forest-2gray_2
+    21300006: forest-2gray_3
+    21300008: forest-2gray_4
+    21300010: forest-2gray_5
+    21300012: forest-2gray_6
+    21300014: forest-2gray_7
+    21300016: forest-2gray_8
+    21300018: forest-2gray_9
+    21300020: forest-2gray_10
+    21300022: forest-2gray_11
+    21300024: forest-2gray_12
+    21300026: forest-2gray_13
+    21300028: forest-2gray_14
+    21300030: forest-2gray_15
+    21300032: forest-2gray_16
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -66,171 +70,223 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: maces_0
+      name: forest-2gray_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 10
-        height: 46
+        y: 596
+        width: 256
+        height: 396
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: maces_1
+      name: forest-2gray_1
       rect:
         serializedVersion: 2
-        x: 12
-        y: 0
-        width: 12
-        height: 46
+        x: 257
+        y: 718
+        width: 256
+        height: 274
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: maces_2
+      name: forest-2gray_2
       rect:
         serializedVersion: 2
-        x: 26
-        y: 0
-        width: 16
-        height: 56
+        x: 514
+        y: 736
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: maces_3
+      name: forest-2gray_3
       rect:
         serializedVersion: 2
-        x: 44
-        y: 0
-        width: 20
-        height: 60
+        x: 771
+        y: 736
+        width: 128
+        height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: maces_4
+      name: forest-2gray_4
       rect:
         serializedVersion: 2
-        x: 66
-        y: 0
-        width: 16
-        height: 60
+        x: 0
+        y: 339
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: maces_5
+      name: forest-2gray_5
       rect:
         serializedVersion: 2
-        x: 84
-        y: 0
-        width: 18
-        height: 58
+        x: 257
+        y: 449
+        width: 256
+        height: 146
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: maces_6
+      name: forest-2gray_6
       rect:
         serializedVersion: 2
-        x: 104
-        y: 0
-        width: 20
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: maces_7
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 0
-        width: 22
-        height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: maces_8
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 0
-        width: 26
-        height: 72
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: maces_9
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 0
-        width: 42
-        height: 114
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: maces_10
-      rect:
-        serializedVersion: 2
-        x: 222
-        y: 0
-        width: 36
-        height: 122
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: maces_11
-      rect:
-        serializedVersion: 2
-        x: 260
-        y: 0
-        width: 64
+        x: 514
+        y: 455
+        width: 256
         height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: maces_12
+      name: forest-2gray_7
       rect:
         serializedVersion: 2
-        x: 326
-        y: 0
-        width: 84
-        height: 152
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15691361}
+        x: 771
+        y: 455
+        width: 139
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forest-2gray_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 256
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forest-2gray_9
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 210
+        width: 256
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forest-2gray_10
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 210
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forest-2gray_11
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 210
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forest-2gray_12
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 210
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forest-2gray_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 141
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forest-2gray_14
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 62
+        width: 137
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forest-2gray_15
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 69
+        width: 137
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forest-2gray_16
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 69
+        width: 137
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

@@ -12,9 +12,11 @@ public class Player : Collidable
     public float jumpSpeed = 10;
     public float walkSpeed = 4;
     public float maxVelocity = 500;
+    public bool canInteract = true;
 
     private bool isFalling = false;
     private bool facingRight = true;
+    public HammerTime hammer;
 
     //private Interactable interactable;
 
@@ -24,6 +26,7 @@ public class Player : Collidable
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        hammer = GetComponentInChildren<HammerTime>();
     }
 	
 	// Update is called once per frame
@@ -67,7 +70,7 @@ public class Player : Collidable
 
     void OnTriggerStay2D(Collider2D collider)
     {
-        if (Input.GetKeyDown("space"))
+        if (canInteract && Input.GetKeyDown("space"))
         {
             var interactable = collider.gameObject.GetComponent<Interactable>();
             if(interactable != null)

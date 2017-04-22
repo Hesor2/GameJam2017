@@ -5,6 +5,13 @@ using UnityEngine;
 public class HammerTime : MonoBehaviour {
 
     public float forcetoapply = 10;
+    public float swingDelay = 0.2f;
+    public int swingSection = 16;
+    private bool swinging = false;
+
+    private int currentSection = 0;
+    private Time lastSwingTime;
+
 
 	// Use this for initialization
 	void Start () {
@@ -12,9 +19,26 @@ public class HammerTime : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+		if(swinging)
+        {
+            if(lastSwingTime == null)
+            {
+
+            }
+        }
 	}
+
+    public void Swing()
+    {
+        swinging = true;
+    }
+
+    public bool isSwinging()
+    {
+        return swinging;
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
