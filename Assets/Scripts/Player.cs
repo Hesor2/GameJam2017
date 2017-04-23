@@ -75,7 +75,7 @@ public class Player : Collidable
         //Jump
         if (Input.GetKeyDown("up") && !isFalling)
         {
-            velocity.y = jumpSpeed * rb.mass * Time.deltaTime;
+            velocity.y = jumpSpeed * rb.mass;
             isFalling = true;
         }
 
